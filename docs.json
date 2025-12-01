@@ -1,84 +1,79 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "willow",
+  "name": "Get My TG",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#3B6EC8",
+    "light": "#5B8EE8",
+    "dark": "#2B5EB8"
+  },
+  "icons": {
+    "library": "lucide"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Документация",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Начало работы",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "getting-started/overview",
+              "getting-started/first-steps"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Аккаунты",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "accounts/structure",
+              "accounts/sessions",
+              "accounts/env",
+              "api/overview"
             ]
           },
           {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
+            "group": "Сеть",
+            "pages": ["network/overview", "network/proxy"]
           },
           {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
+            "group": "Остальное",
+            "pages": ["security/overview", "issues/troubleshooting", "glossary"]
           }
         ]
       },
       {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
+        "tab": "API Reference",
+        "openapi": {
+          "source": "https://api.getmytg.com/docs/openapi.json",
+          "directory": "api-reference"
+        }
+      },
+      {
+        "tab": "SDK",
+        "openapi": {
+          "source": "https://app.stainless.com/api/spec/documented/gmt/openapi.documented.yml",
+          "directory": "sdk-reference"
+        }
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Main Bot",
+          "href": "https://t.me/GetMyTGrobot",
+          "icon": "bot"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Contact Support",
+          "href": "https://t.me/GetMyTGSUPbot",
+          "icon": "message-circle"
+        },
+        {
+          "anchor": "OpenAPI (JSON)",
+          "href": "https://api.getmytg.com/docs/openapi.json",
+          "icon": "download"
         }
       ]
     }
@@ -87,36 +82,22 @@
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/cameo6",
+      "telegram": "https://t.me/GetMyTGrobot"
     }
   }
 }
