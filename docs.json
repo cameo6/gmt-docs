@@ -47,14 +47,7 @@
         ]
       },
       {
-        "tab": "API Reference",
-        "openapi": {
-          "source": "https://api.getmytg.com/docs/openapi.json",
-          "directory": "api-reference"
-        }
-      },
-      {
-        "tab": "SDK",
+        "tab": "API",
         "openapi": {
           "source": "https://app.stainless.com/api/spec/documented/gmt/openapi.documented.yml",
           "directory": "sdk-reference"
