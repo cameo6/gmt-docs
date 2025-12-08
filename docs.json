@@ -21,7 +21,9 @@
             "pages": [
               "index",
               "getting-started/overview",
-              "getting-started/first-steps"
+              "getting-started/first-steps",
+              "getting-started/supported-clients",
+              "faq"
             ]
           },
           {
@@ -30,15 +32,16 @@
               "accounts/structure",
               "accounts/sessions",
               "accounts/env",
-              "api/overview"
+              "accounts/app-id",
+              "accounts/limits"
             ]
           },
           {
             "group": "Сеть",
-            "pages": ["network/overview", "network/proxy"]
+            "pages": ["network/overview", "network/proxy", "network/vpn"]
           },
           {
-            "group": "Остальное",
+            "group": "Справочник",
             "pages": ["security/overview", "issues/troubleshooting", "glossary"]
           }
         ]

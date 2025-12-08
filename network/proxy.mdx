@@ -4,19 +4,13 @@ description: "Как выбрать и настроить прокси для р
 icon: "globe"
 ---
 
-## Почему не VPN
+## VPN не подходит
 
 <Warning>
-**VPN запрещён для работы с аккаунтами.**
+**Не используйте VPN для работы с аккаунтами.** IP популярных VPN-сервисов известны Telegram и находятся в чёрных списках.
 </Warning>
 
-VPN-сервисы используют IP-адреса, которые Telegram уже знает:
-
-- **Сгоревшие IP** — популярные VPN (NordVPN, ExpressVPN, Surfshark) используют одни и те же IP для миллионов пользователей. Telegram давно добавил их в свои базы.
-- **Публичные списки** — IP-адреса VPN публикуются в открытых базах. Telegram проверяет их.
-- **Требование Premium** — при входе с плохого IP Telegram может потребовать покупку Premium. Это прямой сигнал, что IP не подходит.
-
-Используйте качественные прокси вместо VPN.
+Подробнее — [Почему не VPN](/network/vpn).
 
 ## Что такое прокси
 
@@ -128,3 +122,25 @@ IP прокси вызывает подозрения. Смените на бо�
 <Warning>
 Не используйте бесплатные публичные прокси. Они нестабильны, медленны и часто собирают данные.
 </Warning>
+
+## Следующие шаги
+
+<CardGroup cols={2}>
+
+<Card title="Типы IP-адресов" icon="wifi" color="#6b7280" href="/network/overview" arrow="true">
+  Как Telegram оценивает разные типы IP.
+</Card>
+
+<Card title="Почему не VPN" icon="shield-off" color="#6b7280" href="/network/vpn" arrow="true">
+  Почему VPN не подходит для аккаунтов.
+</Card>
+
+<Card title="Окружение" icon="settings" color="#6b7280" href="/accounts/env" arrow="true">
+  Полная настройка окружения.
+</Card>
+
+<Card title="Решение проблем" icon="triangle-alert" color="#6b7280" href="/issues/troubleshooting" arrow="true">
+  Проблемы с прокси и их решение.
+</Card>
+
+</CardGroup>
