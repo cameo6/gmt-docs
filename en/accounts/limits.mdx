@@ -1,0 +1,131 @@
+---
+title: "Telegram Limits"
+description: "Telegram restrictions and limits for accounts."
+icon: "gauge"
+tag: "PRO"
+---
+
+## About Limits
+
+Telegram sets restrictions on user actions. Exceeding limits leads to FLOOD_WAIT (temporary block) or spamblock.
+
+<Warning>
+Limits depend on account trust. New and suspicious accounts have stricter restrictions. Numbers below are approximate for accounts with normal trust.
+</Warning>
+
+## Messages
+
+| Action | Limit | Comment |
+|--------|-------|---------|
+| Messages to strangers | 20-50/day | Depends on trust, new accounts — less |
+| Messages in groups | ~20/minute | In one group |
+| Message forwarding | 5 chats at once | Interface limitation |
+| Editing | No limit | Within 48 hours |
+
+## Groups and Channels
+
+| Action | Limit | Comment |
+|--------|-------|---------|
+| Joining groups | 5-10/day | Less for new accounts |
+| Creating groups | 10-50/day | Depends on trust |
+| Group invites | 20-50/day | Easy to get spamblock |
+| Maximum groups | 500 | For regular accounts |
+| Maximum groups (Premium) | 1000 | With Premium subscription |
+
+## Contacts
+
+| Action | Limit | Comment |
+|--------|-------|---------|
+| Adding contacts | ~50/day | Mass adding = spamblock |
+| Maximum contacts | 10,000 | Hard limit |
+| Contact import | No limit | But large import may raise suspicion |
+
+## Account
+
+| Parameter | Limit |
+|-----------|-------|
+| Username | 5-32 characters, a-z, 0-9, _ |
+| First name | 1-64 characters |
+| Last name | 0-64 characters |
+| Bio | 0-70 characters |
+| Bio (Premium) | 0-140 characters |
+| Profile photos | Up to 10 |
+
+## Sessions
+
+| Parameter | Limit | Comment |
+|-----------|-------|---------|
+| Active sessions | 10 | Maximum simultaneously |
+| Accounts per device | 3 (officially) | Telegram allows 3, but sees up to 5 |
+| Inactivity before deletion | 6 months | Can be changed in settings |
+
+## API and Automation
+
+| Action | Limit | Comment |
+|--------|-------|---------|
+| API requests | ~30/second | Depends on method |
+| getUpdates | 1/second | For bots |
+| File upload | 50 MB | Regular accounts |
+| File upload (Premium) | 4 GB | With Premium subscription |
+
+## FLOOD_WAIT
+
+When you exceed a limit, Telegram returns a FLOOD_WAIT error with the number of seconds to wait.
+
+```
+FLOOD_WAIT_X — wait X seconds
+```
+
+**Important:**
+- Wait the specified time completely
+- Repeated attempts increase wait time
+- Frequent FLOOD_WAITs lower account trust
+
+## Recommendations
+
+<CardGroup cols={2}>
+
+<Card title="Don't Hit Limits" icon="gauge">
+Work at 50-70% of maximum. It's safer for trust.
+</Card>
+
+<Card title="Take Breaks" icon="clock">
+There should be natural pauses between actions. 2-5 seconds between messages.
+</Card>
+
+<Card title="Distribute Load" icon="calendar">
+Better 50 messages over 5 hours than 50 in 10 minutes.
+</Card>
+
+<Card title="Watch FLOOD_WAIT" icon="triangle-alert">
+It's a warning. If you get it often — reduce activity.
+</Card>
+
+</CardGroup>
+
+## Premium Increases Limits
+
+With Premium subscription:
+- More groups (1000 vs 500)
+- More characters in bio (140 vs 70)
+- Files up to 4 GB
+- Faster voice transcription
+- Less suspicion from Telegram
+
+<Note>
+Premium doesn't protect from spamblock for violations, but gives more freedom and trust.
+</Note>
+
+## Next Steps
+
+<CardGroup cols={2}>
+
+<Card title="Security" icon="shield" color="#6b7280" href="/en/security/overview" arrow="true">
+  Trust score and how to improve it.
+</Card>
+
+<Card title="Troubleshooting" icon="triangle-alert" color="#6b7280" href="/en/issues/troubleshooting" arrow="true">
+  What to do with FLOOD_WAIT and spamblocks.
+</Card>
+
+</CardGroup>

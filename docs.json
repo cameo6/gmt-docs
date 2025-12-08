@@ -12,46 +12,112 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Документация",
-        "groups": [
+        "language": "ru",
+        "tabs": [
           {
-            "group": "Начало работы",
-            "pages": [
-              "index",
-              "getting-started/overview",
-              "getting-started/first-steps",
-              "getting-started/supported-clients",
-              "faq"
+            "tab": "Документация",
+            "groups": [
+              {
+                "group": "Начало работы",
+                "pages": [
+                  "ru/index",
+                  "ru/getting-started/overview",
+                  "ru/getting-started/first-steps",
+                  "ru/getting-started/supported-clients",
+                  "ru/faq"
+                ]
+              },
+              {
+                "group": "Аккаунты",
+                "pages": [
+                  "ru/accounts/structure",
+                  "ru/accounts/sessions",
+                  "ru/accounts/env",
+                  "ru/accounts/app-id",
+                  "ru/accounts/limits"
+                ]
+              },
+              {
+                "group": "Сеть",
+                "pages": [
+                  "ru/network/overview",
+                  "ru/network/proxy",
+                  "ru/network/vpn"
+                ]
+              },
+              {
+                "group": "Справочник",
+                "pages": [
+                  "ru/security/overview",
+                  "ru/issues/troubleshooting",
+                  "ru/glossary"
+                ]
+              }
             ]
           },
           {
-            "group": "Аккаунты",
-            "pages": [
-              "accounts/structure",
-              "accounts/sessions",
-              "accounts/env",
-              "accounts/app-id",
-              "accounts/limits"
-            ]
-          },
-          {
-            "group": "Сеть",
-            "pages": ["network/overview", "network/proxy", "network/vpn"]
-          },
-          {
-            "group": "Справочник",
-            "pages": ["security/overview", "issues/troubleshooting", "glossary"]
+            "tab": "API",
+            "openapi": {
+              "source": "https://app.stainless.com/api/spec/documented/gmt/openapi.documented.yml",
+              "directory": "sdk-reference"
+            }
           }
         ]
       },
       {
-        "tab": "API",
-        "openapi": {
-          "source": "https://app.stainless.com/api/spec/documented/gmt/openapi.documented.yml",
-          "directory": "sdk-reference"
-        }
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "Documentation",
+            "groups": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "en/index",
+                  "en/getting-started/overview",
+                  "en/getting-started/first-steps",
+                  "en/getting-started/supported-clients",
+                  "en/faq"
+                ]
+              },
+              {
+                "group": "Accounts",
+                "pages": [
+                  "en/accounts/structure",
+                  "en/accounts/sessions",
+                  "en/accounts/env",
+                  "en/accounts/app-id",
+                  "en/accounts/limits"
+                ]
+              },
+              {
+                "group": "Network",
+                "pages": [
+                  "en/network/overview",
+                  "en/network/proxy",
+                  "en/network/vpn"
+                ]
+              },
+              {
+                "group": "Reference",
+                "pages": [
+                  "en/security/overview",
+                  "en/issues/troubleshooting",
+                  "en/glossary"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API",
+            "openapi": {
+              "source": "https://app.stainless.com/api/spec/documented/gmt/openapi.documented.yml",
+              "directory": "sdk-reference"
+            }
+          }
+        ]
       }
     ],
     "global": {

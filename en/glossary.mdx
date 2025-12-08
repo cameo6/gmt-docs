@@ -1,0 +1,91 @@
+---
+title: "Glossary"
+description: "Terms and definitions."
+icon: "book"
+---
+
+## 2FA (Two-Factor Authentication)
+
+An additional password for logging into an account. Even if someone gets the SMS code, they won't be able to log in without the 2FA password. Required for purchased accounts.
+
+## API Hash / App ID
+
+A pair of application identifiers for working with Telegram API. App ID is a number, API Hash is a string. They affect session trust. Can be obtained at my.telegram.org or used from official clients.
+
+## Device ID
+
+A unique device identifier. Telegram assigns it based on device characteristics: model, OS, client version. If many accounts log in from the same Device ID — they all become linked.
+
+## DC (Data Center)
+
+Telegram data centers. Accounts are assigned to a DC based on the phone number region.
+
+| DC | Region |
+|----|--------|
+| DC1, DC3 | USA |
+| DC2, DC4 | Europe |
+| DC5 | Asia |
+
+## FLOOD_WAIT
+
+An error meaning "wait X seconds". Appears when making too many requests. The number after FLOOD_WAIT is how long to wait. Repeated attempts increase the time.
+
+## MTProto
+
+Telegram's protocol for data transmission. MTProto proxies are special proxies that only work with Telegram and mask traffic.
+
+## Premium
+
+Telegram's paid subscription. Accounts with Premium receive more trust from the system — a spammer wouldn't pay for a subscription.
+
+## Trust Score
+
+An internal account trust rating. Not displayed, but affects limits, verification frequency, and how quickly you get spamblocks. Increases with age, stability, and absence of complaints.
+
+## Verification
+
+A code request to confirm account ownership. Comes when logging in from a new device, changing regions, or suspicious activity.
+
+## Environment
+
+Everything Telegram sees when you connect: IP, device, region, timezone. Parameter mismatches (e.g., German IP + Moscow time) raise suspicion.
+
+## Warm-up Period
+
+A 3-5 day period after logging into an account when you need to minimize activity. Telegram pays extra attention to new sessions.
+
+## Proxy
+
+An intermediate server between you and Telegram. Types include SOCKS5 and MTProto. Telegram sees the proxy's IP, not yours.
+
+## Residential IP
+
+An IP from a home internet provider. The most reliable type — regular people use them. Datacenter and VPN IPs have worse reputations.
+
+## Session
+
+An authorized connection to an account. Created on login, persists until terminated. One account can have multiple sessions (phone, computer, web).
+
+## Spamblock
+
+A restriction from Telegram for suspicious activity. Can be partial (can't message strangers) or full (blocked). Check status via @SpamBot.
+
+## Shadow Ban
+
+A restriction Telegram doesn't notify you about. Messages are sent but don't reach the recipient. Check via @SpamBot.
+
+---
+
+## Learn More
+
+<CardGroup cols={2}>
+
+<Card title="Basic Concepts" icon="lightbulb" color="#6b7280" href="/en/getting-started/overview" arrow="true">
+  How Telegram works and what you need to know.
+</Card>
+
+<Card title="FAQ" icon="table-of-contents" color="#6b7280" href="/en/faq" arrow="true">
+  Frequently asked questions.
+</Card>
+
+</CardGroup>

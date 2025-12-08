@@ -1,0 +1,57 @@
+---
+title: "Basic Concepts"
+description: "How Telegram works and what you need to understand before using an account."
+icon: "lightbulb"
+---
+
+## What is a Session
+
+When you log into Telegram, a session is created. It's a connection between your account and a specific device, network, and region. The session persists until you terminate it or Telegram forcefully resets it.
+
+Each session includes:
+
+- **Device parameters** — model, operating system, client version.
+- **Network context** — IP address and its characteristics.
+- **Regional binding** — geolocation based on IP.
+- **Activity history** — when and from where connections were made.
+
+## Why Stability Matters
+
+Telegram analyzes the behavior of each session. If something looks suspicious, the system may:
+
+- Request re-verification.
+- Restrict sending messages or joining groups (spamblock).
+- Reset the session.
+- In rare cases, block the account.
+
+The more stable your environment and natural your behavior, the fewer problems you'll have.
+
+## What Affects Your Account
+
+| Action | Risk | Comment |
+|--------|------|---------|
+| Complaints from other users | High | Even a few complaints can lead to restrictions. |
+| Mass messages or invites | High | More than 20-30 per hour raises suspicion. |
+| Region or country change | High | A sudden geolocation jump almost always triggers a check. |
+| Fast group joins | Medium | 5-10 groups per day is usually safe. |
+| Device change | Medium | Once a week or less is fine. |
+| Many sessions at once | Medium | Up to 3-5 sessions is usually okay. |
+| IP change within a city | Low | Natural for mobile internet. |
+
+## Warm-up Period
+
+After logging into a purchased account, it needs to "warm up" for 3-5 days. During this period, Telegram pays extra attention to new sessions.
+
+What this means:
+- Minimal activity: read, reply to incoming messages
+- Don't change profile, photo, bio, username
+- Don't join groups, don't add contacts
+- Don't change IP
+
+After the warm-up period, you can fill out your profile and gradually increase activity.
+
+## Next Step
+
+<Card title="Account Activation" icon="play" color="#6b7280" href="/en/getting-started/first-steps" arrow="true">
+  How to log into a purchased account and what to do next.
+</Card>

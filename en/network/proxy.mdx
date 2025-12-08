@@ -1,0 +1,146 @@
+---
+title: "Proxy"
+description: "How to choose and set up a proxy for Telegram."
+icon: "globe"
+---
+
+## VPN Doesn't Work
+
+<Warning>
+**Don't use VPN for working with accounts.** IPs of popular VPN services are known to Telegram and are blacklisted.
+</Warning>
+
+More details — [Why Not VPN](/en/network/vpn).
+
+## What is a Proxy
+
+A proxy is an intermediate server between you and Telegram. All traffic goes through it, and Telegram sees the proxy's IP, not yours.
+
+Unlike VPN, a proxy only works for a specific application. The rest of your device's traffic goes directly.
+
+## Proxy Types
+
+### SOCKS5
+
+Universal protocol. Supports authentication (login/password).
+
+| Parameter | Value |
+|-----------|-------|
+| Telegram support | Full |
+| Encryption | No (only authentication) |
+| Speed | High |
+
+### MTProto
+
+Special protocol for Telegram. Disguises traffic as regular HTTPS.
+
+| Parameter | Value |
+|-----------|-------|
+| Telegram support | Full |
+| Encryption | Yes |
+| Speed | High |
+
+<Note>
+Some MTProto proxies add advertising channels. This isn't dangerous, but annoying. Choose a provider without ads.
+</Note>
+
+## Which Proxy to Choose
+
+### By IP Type
+
+| Type | Trust | Price | When to use |
+|------|-------|-------|-------------|
+| Residential | High | $$$ | Important accounts, long-term work |
+| Mobile | Medium-high | $$ | Good balance of price and quality |
+| Datacenter | Low | $ | Only if no other options |
+
+### Selection Criteria
+
+- **Region** — must match the account's phone number region.
+- **Stability** — proxy shouldn't go down or change IP.
+- **Reputation** — IP not blacklisted.
+- **Speed** — delays affect Telegram performance.
+
+## Setting Up in Telegram
+
+1. Open **Settings**.
+2. Go to **Data and Storage** → **Connection Type**.
+3. Select **Use Proxy**.
+4. Tap **Add Proxy**.
+5. Choose type (SOCKS5 or MTProto).
+6. Enter details: server, port, login/password (for SOCKS5) or secret (for MTProto).
+
+After setup, Telegram will show connection status. If the proxy works, a checkmark will appear.
+
+## Important Rules
+
+<CardGroup cols={2}>
+
+<Card title="One Proxy = One Account" icon="user">
+  Don't use one proxy for multiple accounts. IP links accounts together.
+</Card>
+
+<Card title="Don't Change Without Reason" icon="anchor">
+  Every proxy change is an IP change. Telegram sees this.
+</Card>
+
+<Card title="Have a Backup" icon="copy">
+  Keep a spare proxy in case the main one goes down.
+</Card>
+
+<Card title="Check Before Using" icon="search">
+  Make sure the IP isn't blacklisted and geolocation is correct.
+</Card>
+
+</CardGroup>
+
+## Common Problems
+
+### Proxy Won't Connect
+
+- Check the details (server, port, login, password).
+- Make sure the proxy is working (ask your provider).
+- Try a different proxy.
+
+### Telegram Requires Premium
+
+The proxy IP is bad (datacenter, blacklisted). Need a different proxy with better IP.
+
+### Frequent Verification Requests
+
+The proxy IP raises suspicion. Switch to a higher quality one.
+
+## Where to Get Proxies
+
+We don't advertise specific providers. When choosing, pay attention to:
+
+- Reviews and reputation.
+- Availability of needed regions.
+- IP type (residential, mobile, datacenter).
+- Ability to test before buying.
+
+<Warning>
+Don't use free public proxies. They're unstable, slow, and often collect data.
+</Warning>
+
+## Next Steps
+
+<CardGroup cols={2}>
+
+<Card title="IP Address Types" icon="wifi" color="#6b7280" href="/en/network/overview" arrow="true">
+  How Telegram evaluates different IP types.
+</Card>
+
+<Card title="Why Not VPN" icon="shield-off" color="#6b7280" href="/en/network/vpn" arrow="true">
+  Why VPN doesn't work for accounts.
+</Card>
+
+<Card title="Environment" icon="settings" color="#6b7280" href="/en/accounts/env" arrow="true">
+  Full environment setup.
+</Card>
+
+<Card title="Troubleshooting" icon="triangle-alert" color="#6b7280" href="/en/issues/troubleshooting" arrow="true">
+  Proxy problems and solutions.
+</Card>
+
+</CardGroup>

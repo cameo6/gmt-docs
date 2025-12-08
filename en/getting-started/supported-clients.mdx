@@ -1,0 +1,134 @@
+---
+title: "Supported Clients"
+description: "Which Telegram clients to use for logging into a purchased account."
+icon: "smartphone"
+---
+
+## Recommended Clients
+
+Use official Telegram clients for logging into a purchased account.
+
+<CardGroup cols={2}>
+
+<Card title="Telegram for iOS" icon="apple">
+  App Store. Official client for iPhone and iPad.
+</Card>
+
+<Card title="Telegram for Android" icon="smartphone">
+  Google Play or APK from telegram.org.
+</Card>
+
+<Card title="Telegram Desktop" icon="monitor">
+  Windows, macOS, Linux. Download from desktop.telegram.org.
+</Card>
+
+<Card title="Telegram Web" icon="globe">
+  web.telegram.org. Works in browser.
+</Card>
+
+</CardGroup>
+
+## Why Official Clients
+
+<AccordionGroup>
+
+<Accordion title="Guaranteed code delivery">
+The verification code comes through official Telegram servers. Unofficial clients may not receive the code or receive it with a delay.
+</Accordion>
+
+<Accordion title="Correct Device ID">
+Official clients generate Device ID in a standard way. This is important for session trust.
+</Accordion>
+
+<Accordion title="Up-to-date App ID">
+Built-in App IDs of official clients have better reputation with Telegram.
+</Accordion>
+
+<Accordion title="Less suspicion">
+Telegram knows behavior patterns of official clients. Deviations from them raise suspicion.
+</Accordion>
+
+</AccordionGroup>
+
+## Unofficial Clients
+
+### May Work
+
+Some alternative clients are based on official code:
+
+| Client | Platform | Comment |
+|--------|----------|---------|
+| Telegram X | Android | Official alternative client |
+| Nicegram | iOS | Popular, but has trust nuances |
+| Plus Messenger | Android | Fork of official client |
+
+<Warning>
+Even if a client works, it may have worse App ID reputation or generate suspicious fingerprint. This increases spamblock risk — especially on new accounts or with active use.
+</Warning>
+
+### Not Recommended
+
+| Client | Reason |
+|--------|--------|
+| Nekogram | Non-standard fingerprint |
+| BGram | Unknown App ID reputation |
+| Third-party web clients | Code delivery issues |
+
+## Libraries for Automation
+
+If you're using an account for automation:
+
+| Library | Language | Status |
+|---------|----------|--------|
+| Telethon | Python | Works, but built-in App ID has worse reputation |
+| Pyrogram | Python | Works, similar to Telethon |
+| TDLib | C++/any | Requires your own App ID |
+| GramJS | JavaScript | Works for web applications |
+
+<Note>
+For automation, we recommend using App ID from official clients instead of those built into libraries. More details — [App ID and API Hash](/en/accounts/app-id).
+</Note>
+
+## Login Process
+
+Regardless of client, the process is the same:
+
+1. Open Telegram client
+2. Enter the phone number from the bot
+3. Wait for the code entry screen
+4. Click "Get Code" on the website (link in bot)
+5. Enter the code in the client
+6. If there's 2FA — enter the password (also on the website)
+
+<Warning>
+The code is issued once. If you close Telegram before entering the code — it expires.
+</Warning>
+
+## Client Issues
+
+| Issue | Solution |
+|-------|----------|
+| Code not arriving | Try official client |
+| Requires Premium | IP problem, not client |
+| Session resets immediately | Check proxy stability |
+| Error on login | Try different device |
+
+## Recommendation
+
+<Card title="Telegram Desktop" icon="monitor" color="#6b7280" href="https://desktop.telegram.org" arrow="true">
+  Best choice for first login. Stable, official, works on any OS.
+</Card>
+
+## Next Steps
+
+<CardGroup cols={2}>
+
+<Card title="Account Activation" icon="play" color="#6b7280" href="/en/getting-started/first-steps" arrow="true">
+  How to log into a purchased account.
+</Card>
+
+<Card title="App ID and API Hash" icon="code" color="#6b7280" href="/en/accounts/app-id" arrow="true">
+  Which keys to use for automation.
+</Card>
+
+</CardGroup>

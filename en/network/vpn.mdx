@@ -1,0 +1,96 @@
+---
+title: "Why Not VPN"
+description: "Why VPN doesn't work for Telegram accounts."
+icon: "shield-off"
+---
+
+## Short Answer
+
+<Warning>
+**VPN doesn't work for purchased accounts.**
+
+Use quality proxies instead of VPN.
+</Warning>
+
+## Why VPN is a Bad Choice
+
+### Known IP Addresses
+
+Popular VPN services (NordVPN, ExpressVPN, Surfshark, ProtonVPN, and others) use a limited pool of IP addresses for millions of users.
+
+Telegram has known these IPs for a long time:
+- They're in databases as VPN/proxy
+- Suspicious activity comes from them
+- Many accounts from one IP = red flag
+
+### Public Databases
+
+VPN service IP addresses are published in open databases:
+- ip2location.com
+- ipinfo.io
+- maxmind.com
+
+Telegram uses these databases for verification. If an IP is marked as VPN — trust in it is minimal.
+
+### Premium Requirement
+
+When Telegram sees a login from a bad IP, it may require purchasing Premium to continue. This is a direct signal: the IP doesn't work.
+
+If you see this requirement — don't buy Premium, change to a quality IP instead.
+
+## VPN vs Proxy Comparison
+
+| Parameter | VPN | Quality Proxy |
+|-----------|-----|---------------|
+| IP in databases | Yes, almost always | Rarely (residential) |
+| IP reputation | Low | High |
+| Spamblock chance | High | Low |
+| Premium requirement | Often | Rarely |
+| Cost | Cheap | More expensive |
+| Suitable for accounts | No | Yes |
+
+## What to Use Instead of VPN
+
+### Residential Proxies
+
+IPs from home providers. Look like regular users.
+
+- High trust
+- Not in VPN databases
+- Suitable for important accounts
+
+### Mobile Proxies
+
+IPs from mobile carriers. Natural for Telegram, which is originally a mobile app.
+
+- Good trust
+- Often used by real users
+- Good balance of price and quality
+
+### What to Avoid
+
+- **Free VPNs** — even worse than paid ones, often collect data
+- **Datacenter proxies** — IPs from datacenters also raise suspicion
+- **Public proxies** — unstable, compromised
+
+## Exceptions
+
+VPN may work for:
+- Bypassing Telegram blocks in your country (for personal account)
+- Protecting traffic on public networks
+
+But for working with purchased accounts — only quality proxies.
+
+## Next Steps
+
+<CardGroup cols={2}>
+
+<Card title="Proxy" icon="globe" color="#6b7280" href="/en/network/proxy" arrow="true">
+  How to choose and set up a proxy.
+</Card>
+
+<Card title="IP Types" icon="wifi" color="#6b7280" href="/en/network/overview" arrow="true">
+  More about IP address types.
+</Card>
+
+</CardGroup>
