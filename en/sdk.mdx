@@ -1,0 +1,60 @@
+---
+title: "SDK"
+description: "Official libraries for working with the Get My TG API."
+icon: "code"
+---
+
+## Why use an SDK instead of raw requests
+
+You can call the API directly — but the SDK handles the boilerplate you'd otherwise have to write yourself.
+
+| What the SDK does for you | Without SDK |
+|---|---|
+| Typed methods with IDE autocomplete | Manual request building from documentation |
+| Automatic token and header injection | Setting up authorization in every request yourself |
+| Built-in retries on network errors and rate limits | Writing your own retry logic |
+| Updates alongside the API — nothing breaks silently | Tracking API changes manually |
+
+<Note>
+The SDK is the recommended way to integrate. Direct API requests are best for quick tests or languages without an SDK yet.
+</Note>
+
+## Available SDKs
+
+<CardGroup cols={2}>
+
+<Card title="Python" icon="python" href="https://pypi.org/project/gmt-python-sdk/" arrow="true">
+  gmt-python-sdk on PyPI
+</Card>
+
+<Card title="TypeScript" icon="js" href="https://www.npmjs.com/package/gmt-typescript-sdk" arrow="true">
+  gmt-typescript-sdk on npm
+</Card>
+
+</CardGroup>
+
+## Installation
+
+<CodeGroup>
+
+```bash pip
+pip install gmt-python-sdk
+```
+
+```bash npm
+npm install gmt-typescript-sdk
+```
+
+```bash yarn
+yarn add gmt-typescript-sdk
+```
+
+```bash pnpm
+pnpm add gmt-typescript-sdk
+```
+
+</CodeGroup>
+
+## Using the API directly
+
+If the SDK doesn't fit your use case, the API is available without restrictions. Full endpoint reference is in the [API](/sdk-reference) tab. You can also [download the OpenAPI spec](https://api.getmytg.com/docs/openapi.json).

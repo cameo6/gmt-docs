@@ -48,6 +48,12 @@
                 ]
               },
               {
+                "group": "Разработчикам",
+                "pages": [
+                  "ru/sdk"
+                ]
+              },
+              {
                 "group": "Справочник",
                 "pages": [
                   "ru/security/overview",
@@ -98,6 +104,12 @@
                   "en/network/overview",
                   "en/network/proxy",
                   "en/network/vpn"
+                ]
+              },
+              {
+                "group": "Developers",
+                "pages": [
+                  "en/sdk"
                 ]
               },
               {
