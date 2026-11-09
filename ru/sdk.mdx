@@ -1,60 +1,92 @@
 ---
 title: "SDK"
-description: "Официальные библиотеки для работы с API Get My TG."
+description: "Установка официальных SDK Get My TG для JavaScript, TypeScript и Python."
 icon: "code"
 ---
 
-## Почему SDK, а не прямые запросы
-
-Работать с API можно напрямую — но SDK берёт на себя рутину, которую иначе придётся писать самостоятельно.
-
-| Что делает SDK за вас | Без SDK |
-|---|---|
-| Типизированные методы с автодополнением в IDE | Ручное формирование запросов по документации |
-| Автоматическая подстановка токена и заголовков | Самостоятельная настройка авторизации в каждом запросе |
-| Встроенные ретраи при сетевых ошибках и rate-limit | Собственная логика повторных попыток |
-| Обновляется вместе с API — ничего не сломается | Ручное отслеживание изменений в API |
-
-<Note>
-SDK — рекомендуемый способ интеграции. Прямые запросы к API подходят для быстрых тестов или языков, для которых SDK пока нет.
-</Note>
-
-## Доступные SDK
-
 <CardGroup cols={2}>
 
-<Card title="Python" icon="python" href="https://pypi.org/project/gmt-python-sdk/" arrow="true">
-  gmt-python-sdk на PyPI
+<Card title="JavaScript и TypeScript 0.37.1" icon="js" href="https://www.npmjs.com/package/gmt-typescript-sdk/v/0.37.1" arrow="true">
+  gmt-typescript-sdk в npm
 </Card>
 
-<Card title="TypeScript" icon="js" href="https://www.npmjs.com/package/gmt-typescript-sdk" arrow="true">
-  gmt-typescript-sdk на npm
+<Card title="Python 0.44.1" icon="python" href="https://pypi.org/project/gmt-python-sdk/0.44.1/" arrow="true">
+  gmt-python-sdk в PyPI
 </Card>
 
 </CardGroup>
 
-## Установка
+## Установка и обновление
+
+### JavaScript и TypeScript
+
+Используйте Node.js 20 или новее. Пакет включает типы TypeScript.
 
 <CodeGroup>
 
-```bash pip
-pip install gmt-python-sdk
-```
-
 ```bash npm
-npm install gmt-typescript-sdk
+npm install gmt-typescript-sdk@0.37.1
 ```
 
 ```bash yarn
-yarn add gmt-typescript-sdk
+yarn add gmt-typescript-sdk@0.37.1
 ```
 
 ```bash pnpm
-pnpm add gmt-typescript-sdk
+pnpm add gmt-typescript-sdk@0.37.1
 ```
 
 </CodeGroup>
 
-## Работа с API напрямую
+### Python
 
-Если SDK не подходит, API доступен без ограничений. Полное описание эндпоинтов — во вкладке [API](/sdk-reference). Спецификацию в формате OpenAPI можно [скачать](https://api.getmytg.com/docs/openapi.json).
+Используйте Python 3.9 или новее.
+
+```bash
+python -m pip install "gmt-python-sdk==0.44.1"
+```
+
+При обновлении с JavaScript 0.37.0 или Python 0.44.0 названия пакетов и импорты клиентов остаются прежними.
+
+## Первый запрос
+
+Для проверки доступности API ключ не нужен. Для запросов с авторизацией задайте переменную окружения `GMT_API_KEY` с ключом из профиля бота. Клиенты прочитают её автоматически.
+
+<CodeGroup>
+
+```javascript JavaScript
+import Gmt from 'gmt-typescript-sdk'
+
+const client = new Gmt()
+const result = await client.service.healthCheck()
+console.log(result.status)
+```
+
+```python Python
+from gmt import Gmt
+
+with Gmt() as client:
+    result = client.service.health_check()
+    print(result.status)
+```
+
+```python Python (async)
+import asyncio
+
+from gmt import AsyncGmt
+
+
+async def main():
+    async with AsyncGmt() as client:
+        result = await client.service.health_check()
+        print(result.status)
+
+
+asyncio.run(main())
+```
+
+</CodeGroup>
+
+## Справочник API
+
+На [странице проверки доступности](/sdk-reference/service/health-check) рядом с HTTP-методом приведены примеры для JavaScript и Python. Примеры для остальных операций есть во вкладке API. Для прямых запросов можно [скачать спецификацию OpenAPI](https://api.getmytg.com/docs/openapi.json).

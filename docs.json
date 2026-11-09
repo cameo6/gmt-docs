@@ -66,7 +66,7 @@
           {
             "tab": "API",
             "openapi": {
-              "source": "https://app.stainless.com/api/spec/documented/gmt/openapi.documented.yml",
+              "source": "https://api.getmytg.com/docs/openapi.json",
               "directory": "sdk-reference"
             }
           }
@@ -125,7 +125,7 @@
           {
             "tab": "API",
             "openapi": {
-              "source": "https://app.stainless.com/api/spec/documented/gmt/openapi.documented.yml",
+              "source": "https://api.getmytg.com/docs/openapi.json",
               "directory": "sdk-reference"
             }
           }
