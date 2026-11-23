@@ -6,11 +6,11 @@ icon: "code"
 
 <CardGroup cols={2}>
 
-<Card title="JavaScript и TypeScript 0.37.3" icon="js" href="https://www.npmjs.com/package/gmt-typescript-sdk/v/0.37.3" arrow="true">
+<Card title="JavaScript и TypeScript 0.37.5" icon="js" href="https://www.npmjs.com/package/gmt-typescript-sdk/v/0.37.5" arrow="true">
   gmt-typescript-sdk в npm
 </Card>
 
-<Card title="Python 0.44.3" icon="python" href="https://pypi.org/project/gmt-python-sdk/0.44.3/" arrow="true">
+<Card title="Python 0.44.6" icon="python" href="https://pypi.org/project/gmt-python-sdk/0.44.6/" arrow="true">
   gmt-python-sdk в PyPI
 </Card>
 
@@ -25,15 +25,15 @@ icon: "code"
 <CodeGroup>
 
 ```bash npm
-npm install gmt-typescript-sdk@0.37.3
+npm install gmt-typescript-sdk@0.37.5
 ```
 
 ```bash yarn
-yarn add gmt-typescript-sdk@0.37.3
+yarn add gmt-typescript-sdk@0.37.5
 ```
 
 ```bash pnpm
-pnpm add gmt-typescript-sdk@0.37.3
+pnpm add gmt-typescript-sdk@0.37.5
 ```
 
 </CodeGroup>
@@ -43,7 +43,7 @@ pnpm add gmt-typescript-sdk@0.37.3
 Используйте Python 3.9 или новее.
 
 ```bash
-python -m pip install "gmt-python-sdk==0.44.3"
+python -m pip install "gmt-python-sdk==0.44.6"
 ```
 
 При обновлении с JavaScript 0.37.0 или Python 0.44.0 названия пакетов и импорты клиентов остаются прежними.
@@ -88,6 +88,18 @@ asyncio.run(main())
 ```
 
 </CodeGroup>
+
+### `accounts.list()` / `purchases.list()`
+
+- Python · `client.accounts.list()` · `client.purchases.list()` · `client.purchases.list(include="code_request")`
+- JavaScript / TypeScript · `await client.purchases.list({ sort: 'date_desc', include: 'code_request' })`
+
+### `purchases.bulk.download()`
+
+- Python · `client.purchases.bulk.download(purchase_id).write_to_file("accounts.zip")`
+- Python (async) · `response = await client.purchases.bulk.download(purchase_id)` · `await response.write_to_file("accounts.zip")`
+- JavaScript / TypeScript · `import { writeFile } from 'node:fs/promises'` · `const response = await client.purchases.bulk.download(purchaseId)` · `await writeFile('accounts.zip', Buffer.from(await response.arrayBuffer()))`
+- HTTP 409 · `ConflictError`
 
 ## Справочник API
 
